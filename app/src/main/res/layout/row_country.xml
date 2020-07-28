@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
-    <data>
-        <variable
-            name="itemData"
-            type="com.example.covid19.model.Country" />
-    </data>
     <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:weightSum="5"
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -15,15 +10,13 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="100dp">
-
             <ImageView
                 android:id="@+id/ic_flag"
-                loadImage="@{itemData.flag}"
                 android:layout_width="match_parent"
-                android:layout_height="84dp"
-                android:src="@drawable/ic_vietnam"></ImageView>
+                android:layout_height="60dp"
+                android:src="@drawable/ic_vietnam">
+            </ImageView>
             <TextView
-                updateText="@{itemData.country}"
                 android:textStyle="bold"
                 android:id="@+id/tv_name_country"
                 android:gravity="center"
@@ -46,13 +39,12 @@
                 android:layout_height="30dp">
             </TextView>
             <TextView
-                updateText="@{itemData.cases}"
                 android:textColor="#F44336"
                 android:gravity="center"
                 android:id="@+id/tv_country_infected"
                 android:text="300"
                 android:layout_width="match_parent"
-                android:layout_height="70dp">
+                android:layout_height="50dp">
             </TextView>
 
         </LinearLayout>
@@ -69,12 +61,11 @@
                 android:layout_height="30dp">
             </TextView>
             <TextView
-                updateText="@{itemData.deaths}"
                 android:gravity="center"
                 android:id="@+id/tv_country_die"
                 android:text="300"
                 android:layout_width="match_parent"
-                android:layout_height="70dp">
+                android:layout_height="50dp">
             </TextView>
 
         </LinearLayout>
@@ -87,18 +78,17 @@
                 android:textColor="#FFC107"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:text="Đang chữa"
+                android:text="Điều trị"
                 android:layout_width="match_parent"
                 android:layout_height="30dp">
             </TextView>
             <TextView
-                updateText="@{itemData.active}"
                 android:textColor="#FFC107"
                 android:gravity="center"
                 android:id="@+id/tv_country_cure"
                 android:text="300"
                 android:layout_width="match_parent"
-                android:layout_height="70dp">
+                android:layout_height="50dp">
             </TextView>
 
         </LinearLayout>
@@ -116,19 +106,13 @@
                 android:layout_height="30dp">
             </TextView>
             <TextView
-                updateText="@{itemData.recovered}"
                 android:textColor="#4CAF50"
                 android:gravity="center"
                 android:id="@+id/tv_country_heal"
                 android:text="300"
                 android:layout_width="match_parent"
-                android:layout_height="70dp">
+                android:layout_height="50dp">
             </TextView>
-
         </LinearLayout>
-
-
     </LinearLayout>
-
-</layout>
 
